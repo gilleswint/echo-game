@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F8E9C7;
+    color: #2B477D;
+  }
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+.glass-panel {
+  background: #FFFFFF;
+  border: 2px solid rgba(43, 71, 125, 0.12);
+  box-shadow: 0 10px 30px rgba(43, 71, 125, 0.08);
+}
+
+.glass-panel-glow {
+  background: #FFFFFF;
+  border: 2px solid #2B477D;
+  box-shadow: 0 12px 36px rgba(43, 71, 125, 0.16);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #2B477D 0%, #1D3159 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(135deg, #2B477D 0%, #F25F5C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 3D Card Flip */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(248, 233, 199, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(43, 71, 125, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(43, 71, 125, 0.5);
+}

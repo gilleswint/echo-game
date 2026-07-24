@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: echo-backend
+    env: node
+    plan: free
+    buildCommand: pnpm --filter echo-shared build && pnpm --filter echo-server build
+    startCommand: pnpm --filter echo-server start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.0
+      - key: CLIENT_ORIGIN
+        sync: false

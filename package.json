@@ -1,0 +1,10 @@
+{
+  "name": "echo-monorepo",
+  "private": true,
+  "scripts": {
+    "dev:server": "pnpm --filter echo-server dev",
+    "dev:client": "pnpm --filter echo-client dev",
+    "build": "pnpm --filter echo-shared build && pnpm --filter echo-server build && pnpm --filter echo-client build",
+    "start:server": "pnpm --filter echo-server start"
+  }
+}

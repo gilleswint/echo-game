@@ -1,0 +1,82 @@
+[
+  {
+    "id": "animals",
+    "category": "Animals",
+    "icon": "🐾",
+    "words": [
+      "Tiger", "Penguin", "Camel", "Dolphin", "Elephant", "Chameleon",
+      "Giraffe", "Kangaroo", "Octopus", "Falcon", "Cheetah", "Panda",
+      "Flamingo", "Owl", "Wolf", "Gorilla"
+    ]
+  },
+  {
+    "id": "foods",
+    "category": "Food & Cuisine",
+    "icon": "🍕",
+    "words": [
+      "Pizza", "Sushi", "Tacos", "Croissant", "Ramen", "Hamburger",
+      "Paella", "Gelato", "Pancakes", "Falafel", "Lasagna", "Burrito",
+      "Dim Sum", "Waffles", "Fondue", "Pretzel"
+    ]
+  },
+  {
+    "id": "countries",
+    "category": "Countries & Nations",
+    "icon": "🌍",
+    "words": [
+      "Japan", "Brazil", "Canada", "Egypt", "Australia", "France",
+      "Kenya", "Mexico", "Italy", "Thailand", "Norway", "Argentina",
+      "India", "Greece", "Peru", "Iceland"
+    ]
+  },
+  {
+    "id": "professions",
+    "category": "Professions & Jobs",
+    "icon": "💼",
+    "words": [
+      "Astronaut", "Architect", "Chef", "Detective", "Pilot", "Surgeon",
+      "Firefighter", "Archaeologist", "Biologist", "Photographer", "Judge",
+      "Software Engineer", "Scuba Diver", "Electrician", "Musician"
+    ]
+  },
+  {
+    "id": "superheroes",
+    "category": "Superheroes & Villains",
+    "icon": "🦸",
+    "words": [
+      "Spider-Man", "Batman", "Wonder Woman", "Iron Man", "Thor", "Superman",
+      "Wolverine", "Joker", "Thanos", "Catwoman", "Black Panther", "Doctor Strange",
+      "Flash", "Deadpool", "Magneto"
+    ]
+  },
+  {
+    "id": "movies",
+    "category": "Movie Genres & Props",
+    "icon": "🎬",
+    "words": [
+      "Red Carpet", "Clapperboard", "Stunt Double", "Oscars", "Popcorn",
+      "Director Chair", "Soundtrack", "Special Effects", "Film Reel",
+      "Blockbuster", "Trailers", "Box Office", "Green Screen", "Megaphone"
+    ]
+  },
+  {
+    "id": "tech",
+    "category": "Technology & Gadgets",
+    "icon": "💻",
+    "words": [
+      "Smartphone", "Virtual Reality", "Drone", "Microchip", "Satellite",
+      "Quantum Computer", "Bluetooth", "Cybersecurity", "Smartwatch",
+      "Supercomputer", "Hologram", "Robot", "AI Assistant", "Fiber Optics"
+    ]
+  },
+  {
+    "id": "instruments",
+    "category": "Music Instruments",
+    "icon": "🎸",
+    "words": [
+      "Electric Guitar", "Grand Piano", "Saxophone", "Drums", "Violin",
+      "Accordion", "Harp", "Trumpet", "Flute", "Cello", "Xylophone",
+      "Harmonica", "Ukulele", "Synthesizer"
+    ]
+  }
+]
