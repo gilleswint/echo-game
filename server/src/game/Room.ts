@@ -369,6 +369,12 @@ export class Room {
     }, 1000);
   }
 
+  public skipDiscussion(socketId: string) {
+    if (this.phase !== 'Discussion') return;
+    this.stopTimer();
+    this.startVotingPhase();
+  }
+
   public startVotingPhase() {
     this.phase = 'Voting';
     this.stopTimer();

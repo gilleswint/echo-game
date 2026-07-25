@@ -38,4 +38,5 @@ export interface ClientToServerEvents {
   returnToLobby: () => void;
   leaveRoom: () => void;
   skipCategory: () => void;
+  skipDiscussion: () => void;
 }

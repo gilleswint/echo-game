@@ -30,6 +30,7 @@ interface GameContextType {
   returnToLobby: () => void;
   kickPlayer: (playerId: string) => void;
   skipCategory: () => void;
+  skipDiscussion: () => void;
   clearToast: () => void;
 }
 
@@ -189,6 +190,10 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     showToast('Skipping category & selecting a new secret word...', 'info');
   };
 
+  const skipDiscussion = () => {
+    socket?.emit('skipDiscussion');
+  };
+
   const myPlayerId = socket?.id || null;
   const isHost = gameState ? gameState.hostId === myPlayerId : false;
 
@@ -216,6 +221,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
         returnToLobby,
         kickPlayer,
         skipCategory,
+        skipDiscussion,
         clearToast
       }}
     >

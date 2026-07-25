@@ -140,6 +140,14 @@ export function setupSocketHandlers(
       }
     });
 
+    // Skip / End Discussion
+    socket.on('skipDiscussion', () => {
+      const room = roomManager.findRoomBySocketId(socket.id);
+      if (!room) return;
+      room.skipDiscussion(socket.id);
+      io.to(room.code).emit('syncState', room.getPublicState());
+    });
+
     // Ready confirm
     socket.on('playerReady', () => {
       const room = roomManager.findRoomBySocketId(socket.id);
