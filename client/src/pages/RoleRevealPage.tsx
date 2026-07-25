@@ -2,6 +2,7 @@ import React from 'react';
 import { useGame } from '../context/GameContext';
 import { Header } from '../components/Header';
 import { Card } from '../components/Card';
+import { CountdownTimer } from '../components/CountdownTimer';
 import { Users, CheckCircle2, RefreshCw } from 'lucide-react';
 import { useAudio } from '../hooks/useAudio';
 
@@ -21,7 +22,7 @@ export const RoleRevealPage: React.FC = () => {
       <main className="flex-1 max-w-2xl w-full mx-auto p-4 sm:p-6 space-y-6 flex flex-col items-center justify-center">
         
         {/* Banner */}
-        <div className="text-center space-y-2">
+        <div className="text-center space-y-2 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FFD166] border-2 border-[#2B477D] text-[#2B477D] text-xs font-black uppercase tracking-wider shadow-sm">
             <Users className="w-3.5 h-3.5" />
             <span>Phase 1 • Role Reveal</span>
@@ -34,6 +35,14 @@ export const RoleRevealPage: React.FC = () => {
           <p className="text-sm font-semibold text-[#2B477D]/80 max-w-md mx-auto">
             Tap the card below to reveal your secret role and category. Keep your screen private!
           </p>
+
+          <div className="pt-2">
+            <CountdownTimer
+              remainingSeconds={gameState.timerRemaining}
+              totalDuration={gameState.timerDuration || 10}
+              label="Auto-starts in"
+            />
+          </div>
         </div>
 
         {/* Secret Card */}

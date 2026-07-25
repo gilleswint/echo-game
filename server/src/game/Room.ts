@@ -12,7 +12,8 @@ import {
   TURN_TIME_SECONDS,
   DISCUSSION_TIME_SECONDS,
   VOTING_TIME_SECONDS,
-  GUESS_TIME_SECONDS
+  GUESS_TIME_SECONDS,
+  ROLE_REVEAL_TIME_SECONDS
 } from '../config';
 
 export class Room {
@@ -243,7 +244,25 @@ export class Room {
     }
     this.turnOrder = playerIds;
 
+    this.startRoleRevealTimer();
+  }
+
+  private startRoleRevealTimer() {
+    this.stopTimer();
+    this.timerDuration = ROLE_REVEAL_TIME_SECONDS;
+    this.timerRemaining = ROLE_REVEAL_TIME_SECONDS;
+
     this.notifyStateChange();
+
+    this.timerInterval = setInterval(() => {
+      this.timerRemaining--;
+      this.onTimerTickCallback(this.code, this.timerRemaining);
+
+      if (this.timerRemaining <= 0) {
+        this.stopTimer();
+        this.startCluePhase();
+      }
+    }, 1000);
   }
 
   public skipCategory(hostSocketId: string) {
@@ -289,6 +308,7 @@ export class Room {
     // If everyone is ready, automatically progress to Clue phase
     const allReady = Array.from(this.players.values()).every(p => p.isReady || !p.isConnected);
     if (allReady) {
+      this.stopTimer();
       this.startCluePhase();
     } else {
       this.notifyStateChange();
